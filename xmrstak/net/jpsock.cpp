@@ -709,6 +709,9 @@ bool jpsock::cmd_submit(const char* sJobId, uint32_t iNonce, const uint8_t* bRes
 		case cryptonight_superfast:
 			algo_name = "cryptonight_superfast";
 			break;
+		case cryptonight_pulse8:
+			algo_name = "cryptonight_pulse8";
+			break;
 		default:
 			algo_name = "unknown";
 			break;
