@@ -38,9 +38,9 @@ constexpr uint32_t CRYPTONIGHT_MASARI_ITER = 0x40000;
 
 constexpr uint32_t CRYPTONIGHT_SUPERFAST_ITER = 0x20000; 
 
-constexpr size_t CRYPTONIGHT_PULSE8_MEMORY = 4 * 1024 * 1024;
+constexpr size_t CRYPTONIGHT_PULSE8_MEMORY = 2 * 1024 * 1024;
 constexpr uint32_t CRYPTONIGHT_PULSE_MASK = 0x1FFFF0;
-constexpr uint32_t CRYPTONIGHT_PULSE8_ITER = 0x40000;
+constexpr uint32_t CRYPTONIGHT_PULSE8_ITER = 0x80000;
 
 template<xmrstak_algo ALGO>
 inline constexpr size_t cn_select_memory() { return 0; }
