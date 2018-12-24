@@ -415,9 +415,11 @@ bool minethd::self_test()
 
 		if(!bResult)
 			hashf = func_selector(::jconf::inst()->HaveHardwareAes(), true, xmrstak_algo::cryptonight_pulse8);
-			hashf("This is a test This is a test This is a test", 44, out, ctx)
-			printer::inst()->print_msg(L0,
-				out);
+			hashf("This is a test This is a test This is a test", 44, out, ctx);
+		  auto type = out;
+		  std::cout << "HASH: " << type << "\n";
+// 			printer::inst()->print_msg(L0,
+// 				out);
 	}
 
 	for (int i = 0; i < MAX_N; i++)
