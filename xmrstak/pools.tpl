@@ -25,6 +25,7 @@ POOLCONF],
  *    bbscoin (automatic switch with block version 3 to cryptonight_v7)
  *    bittube (uses cryptonight_bittube2 algorithm)
  *    freehaven
+ *    electronero pulse (uses unique cryptonight_pulse8)
  *    graft
  *    haven (automatic switch with block version 3 to cryptonight_haven)
  *    intense
@@ -49,6 +50,7 @@ POOLCONF],
  *    cryptonight_bittube2
  *    cryptonight_haven
  *    cryptonight_heavy
+ *    cryptonight_pulse8 (testing 8mb)
  */
 
 "currency" : "CURRENCY",
