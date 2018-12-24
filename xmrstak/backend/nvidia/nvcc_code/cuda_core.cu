@@ -413,7 +413,7 @@ __global__ void cryptonight_core_gpu_phase2_double( int threads, int bfactor, in
 			// Use division_result as an input for the square root to prevent parallel implementation in hardware
 			sqrt_result = fast_sqrt_v2(cx_mul + division_result);
 		}
-		if(ALGO == cryptonight_pulse8 && sub == 1
+		if(ALGO == cryptonight_pulse8 && sub == 1)
 		{
 			// Use division and square root results from the _previous_ iteration to hide the latency
 			((uint32_t*)&division_result)[1] ^= sqrt_result;
