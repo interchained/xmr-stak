@@ -66,7 +66,7 @@
 
 #endif //_WIN32
 
-namespace xmrstak
+namespace xmrstak	
 {
 namespace cpu
 {
@@ -664,15 +664,15 @@ minethd::cn_hash_fun minethd::func_multi_selector(bool bHaveAes, bool bNoPrefetc
 			{
 				// Intel Ivy Bridge (Xeon v2, Core i7/i5/i3 3xxx, Pentium G2xxx, Celeron G1xxx)
 				if(N == 1)
-					selected_function = Cryptonight_hash_asm<1u, 0u>::template hash<cryptonight_pulse8>;
+					selected_function = Cryptonight_hash_asm<1u, 0u>::template hash<cryptonight_monero_v8>;
 				else if(N == 2)
-					selected_function = Cryptonight_hash_asm<2u, 0u>::template hash<cryptonight_pulse8>;
+					selected_function = Cryptonight_hash_asm<2u, 0u>::template hash<cryptonight_monero_v8>;
 			}
 			// supports only 1 thread per hash
 			if(N == 1 && selected_asm == "amd_avx")
 			{
 				// AMD Ryzen (1xxx and 2xxx series)
-				selected_function = Cryptonight_hash_asm<1u, 1u>::template hash<cryptonight_pulse8>;
+				selected_function = Cryptonight_hash_asm<1u, 1u>::template hash<cryptonight_monero_v8>;
 			}
 			if(asm_version_str == "auto" && (selected_asm != "intel_avx" || selected_asm != "amd_avx"))
 				printer::inst()->print_msg(L3, "Switch to assembler version for '%s' cpu's", selected_asm.c_str());
